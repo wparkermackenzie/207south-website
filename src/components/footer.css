@@ -1,0 +1,34 @@
+/*
+207 South: footer.css
+
+Layout
+------
+The footer uses 2 FlexBoxes:
++Links---------------------------+
+| #Link   #Link   #Link   #Link  |
++--------------------------------+
++Social Media Icons--------------+
+| (ICON)  (ICON)  (ICON)  (ICON) |
++--------------------------------+
+*/
+
+.footer-links {
+  /* FlexBox : Links */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-social-media {
+  /* FlexBox: Social Media Icons */
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin: .5rem;
+}
+
+.footer-social-media-link {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+

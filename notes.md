@@ -61,12 +61,7 @@ git add myfile.jpg
 [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 # Todo
- - Change logo192.png into a logo that represents my website 207south
- - Change favicon.ico
- - Add the following to the head of the html
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  - Create a better Logo, make the favicon the same as the logo
   - Look into vulnerabilities identified when installing react. What are these
     and what should my level of concern be?
     npm audit

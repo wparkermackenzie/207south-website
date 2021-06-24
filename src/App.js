@@ -1,8 +1,10 @@
 import './App.css';
-import {Home} from './pages/home.js';
-import {Navbar} from './components/navbar.js';
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+
+import {Footer} from './components/footer.js';
+import {Navbar} from './components/navbar.js';
+import {Home} from './pages/home.js';
 
 /**
  * Entry point function component for the react application.
@@ -29,7 +31,9 @@ function App() {
               this to happen while preserving user state.
 
               Anything outside of the BrowserRouter router component will be
-              rendered on every page.
+              rendered on every page. As well as anything just before the 
+              Switch. It is unclear to me if one method is prefered over the
+              other or why. 
 
               The Switch component renders the first route which matches a 
               pattern. Given that, order is important; always place a more
@@ -43,9 +47,11 @@ function App() {
             <BrowserRouter>
                 <Navbar />
                 <Switch>
-                    <Route path='/' exact />
+                    <Route path='/' exact >
                       <Home />
+                    </Route>
                 </Switch>
+                <Footer />
             </BrowserRouter>
         </>
     )
