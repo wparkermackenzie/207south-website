@@ -1,0 +1,55 @@
+{
+  "community" : {
+    "displayName" : "Community",
+    "displayDescription" : "A list of community level projects",
+    "projects" : [
+      {
+        "displayName" : "Kennebunk Land Conservation Trails",
+        "displayDescription" : "Stuff goes here associated with land trust",
+        "displayImage" : "randomImage1.jpg",
+        "page" : "projects/klt/klt.js"
+      },
+      {
+        "displayName" : "Kennebunk Lacrosse Club",
+        "displayDescripton" : "Lacrosse the best sport ever invented",
+        "page" : "projects/kbklax/kbklax.js"
+      }
+    ]
+  },
+  "technology" : {
+    "displayName" : "Technology",
+    "displayDescription" : "Fun technology projets (some even completed)",
+    "projects" : [
+      {
+        "displayName" : "Website 207South",
+        "displayDescription" : "Building this website with React",
+        "displayImage" : "web207south/web207south.jpg",
+        "page" : "projects/web207south/web207south.js"
+      },
+      {
+        "displayName" : "Linux Threads",
+        "displayDescription" : "Thoughts to keep in mind when using Linux Threads",
+        "displayImage" : "linuxThreads/linuxThreads.jpg",
+        "page" : "projects/linuxThreads/linuxThreads.js"
+      }
+    ]
+  },
+  "woodworking" : {
+    "displayName" : "Wood Working",
+    "displayDescription": "Building stuff out of wood",
+    "projects" : [
+      {
+        "displayName" : "Bird Houses",
+        "displayDescription" : "Housing my feathered friends",
+        "displayImage" : "birdHouses/birdHouses.jpg",
+        "page" : "projects/birdHouses/birdHouse.js"
+      },
+      {
+        "displayName" : "Sign Post",
+        "displayDescription" : "Signs signs everywhere theres signs",
+        "displayImage" : "signPost/signPost.jpg",
+        "page" : "projects/signPost/signPost.js"
+      }
+    ]
+  }
+}

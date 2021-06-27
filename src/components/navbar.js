@@ -39,8 +39,8 @@ function Navbar() {
     Hook. Quite simply call the react function useState, pass in the default
     state, and it will return a variable with the current state and a function
     to call to change the state as an array. In this case the returned array is
-    destructured into the varaible containing the current state (mobileMenuIsOpen)
-    and the function to call to change the state (setMobileMenuIsOpen).
+    destructured into the varaible containing the current state (menuIsOpen)
+    and the function to call to change the state (setMenuIsOpen).
 
     Anytime the function which changes the state is called, the Navbar container
     function will be executed and the state varaible will contain the new value which
@@ -51,20 +51,20 @@ function Navbar() {
     information and reasons for the rules and regulations can be found on reactjs.org
     https://reactjs.org/docs/hooks-intro.html
     */
-  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-  const closeMobileMenu = () => setMobileMenuIsOpen(false);
-  const handleMobileMenuClick = () => setMobileMenuIsOpen(!mobileMenuIsOpen);
+  const closeMenu = () => setMenuIsOpen(false);
+  const handleMenuClick = () => setMenuIsOpen(!menuIsOpen);
 
   return(
     <>
       <nav className="navigationBar">
           {/* 
             Display a link to the main page of the application.
-              - When selected the mobile menu should close.
+              - When selected the  menu should close.
               - It should display the name of the website as well as the website icon
           */}
-          <NavLink to='/' className='navigationBar-container-logo' onClick={closeMobileMenu} >
+          <NavLink to='/' className='navigationBar-container-logo' onClick={closeMenu} >
             207 South
           </NavLink>
 
@@ -74,34 +74,34 @@ function Navbar() {
           {/*
             Menu items - links to other pages in the application
             */}   
-          <ul className={mobileMenuIsOpen ? 'navigationBar-menu isActive' : 'navigationBar-menu'}>
-            <li className={mobileMenuIsOpen ? 'navigationBar-menuItem isActive' : 'navigationBar-menuItem'}>
-              <Link to='/' className='navigationBar-link' onClick={closeMobileMenu}>
+          <ul className={menuIsOpen ? 'navigationBar-menu isActive' : 'navigationBar-menu'}>
+            <li className={menuIsOpen ? 'navigationBar-menuItem isActive' : 'navigationBar-menuItem'}>
+              <Link to='/' className='navigationBar-link' onClick={closeMenu}>
                 Home
               </Link>
             </li>
-            <li className={mobileMenuIsOpen ? 'navigationBar-menuItem isActive' : 'navigationBar-menuItem'}>
-              <Link to='/career' className='navigationBar-link' onClick={closeMobileMenu}>
+            <li className={menuIsOpen ? 'navigationBar-menuItem isActive' : 'navigationBar-menuItem'}>
+              <Link to='/career' className='navigationBar-link' onClick={closeMenu}>
                 Career
               </Link>
             </li>
-            <li className={mobileMenuIsOpen ? 'navigationBar-menuItem isActive' : 'navigationBar-menuItem'}>
-              <Link to='/thoughts' className='navigationBar-link' onClick={closeMobileMenu}>
+            <li className={menuIsOpen ? 'navigationBar-menuItem isActive' : 'navigationBar-menuItem'}>
+              <Link to='/thoughts' className='navigationBar-link' onClick={closeMenu}>
                 Thoughts
               </Link>
             </li>
-            <li className={mobileMenuIsOpen ? 'navigationBar-menuItem isActive' : 'navigationBar-menuItem'}>
-              <Link to='/projects' className='navigationBar-link' onClick={closeMobileMenu}>
+            <li className={menuIsOpen ? 'navigationBar-menuItem isActive' : 'navigationBar-menuItem'}>
+              <Link to='/projects' className='navigationBar-link' onClick={closeMenu}>
                 Projects
               </Link>
             </li>
           </ul>
 
           {/*
-            Create a button to enable/disable the mobile menu
+            Create a button to enable/disable the menu
           */}
-          <div className='navigationBar-container-menu_icon' onClick={handleMobileMenuClick}>
-            <i className={mobileMenuIsOpen ? 'fas fa-times' : 'fas fa-bars'} />
+          <div className='navigationBar-container-menu_icon' onClick={handleMenuClick}>
+            <i className={menuIsOpen ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
 
         </div> {/*navigationBar-container*/}

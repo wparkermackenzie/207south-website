@@ -8,13 +8,20 @@ function Footer() {
     <div className='footer-container'>
       <div className='footer-links'>
         <Link to='/'>
-          <i className='fas fa-home'>Home</i>
+          {/* Cannot simply put the word in the same html tag <i> with the 
+              font awesome icon as the word will not take the document's 
+              font. Instead put each into a <span> tag which does not add a
+              break to the document */}
+          <span className='fas fa-home'/>
+          <span className='footer-links-text'>Home</span>
         </Link>
         <Link to='/career'>
-          <i className='fas fa-microchip'>Career</i>
+          <span className='fas fa-microchip'/>
+          <span className='footer-links-text'>Career</span>
         </Link>
         <a href='mailto:wparkermackenzie@outlook.com'>
-          <i className='fas fa-paper-plane'>Contact</i>
+          <span className='fas fa-paper-plane'/>
+          <span className='footer-links-text'>Contact</span>
         </a>
       </div>
 
