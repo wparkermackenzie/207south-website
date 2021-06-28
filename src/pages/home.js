@@ -1,18 +1,18 @@
 import React from 'react';
-//import {Card} from '../components/card.js';
-//import * as projectDb from '../data/projects.json';
-import data from '../data/projects.json';
+import { Projects } from '../data/projects.js';
 
 function displayProjectNoteCards () {
-  //const {projectJSON} = projectDb; 
-  //const parsedProjectNotes = JSON.parse(projectJSON);
-  //console.log(`parsed: ${parsedProjectNotes}`);
-  const jsonStr = JSON.stringify(data);
-  //console.log(`jsonText: ${projectJSON}`);
-  console.log(`jsonStr: ${jsonStr}`);
-  console.log(`stuff: ${data.community.displayName}`);
-  // Create an object to parse the data in the data directory
-  data.community.projects.forEach( element => {console.log(element.displayName)});
+  let projects = new Projects();
+  for(let entry of projects) {
+    console.log(entry.toString());
+  }
+
+  // Need to create a unique react key
+  // Need to look at exceptions... it may not have displayImage, etc...
+  // Need to validate data in test mode...
+  // Create a unit test
+  // Create an object which defines the project's paths
+  // Validate the json data and limit the max number of items to parse
 }
 
 function Home() {
