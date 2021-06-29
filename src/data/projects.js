@@ -1,6 +1,7 @@
 import jsonData from './projects.json'; 
 
 // TBD UNIT Tests
+// Validate file types for images
 
 /**
  * Abstract the data from the main application. In this case the data is
@@ -29,8 +30,8 @@ class ProjectEntry {
     this.#topicDescription = json?.topicDescription;
     this.#name = json?.displayName;
     this.#description = json?.displayDescription;
-    this.#image = `/images/${json?.displayImage}`;
-    this.#page = `/pages/${json?.page}`;
+    this.#image = json?.displayImage;
+    this.#page = json?.page;
   }
 
   get description() {return(this.#description);}
@@ -52,6 +53,10 @@ class ProjectEntry {
 
 class Projects {
   #json = jsonData;
+
+  constructor(json) {
+    this.#json = (undefined === json) ? jsonData : json;
+  }
   
   [Symbol.iterator]() {
     let topicIndex = 0;
