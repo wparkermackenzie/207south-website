@@ -12,7 +12,8 @@
         },
         {
           "displayName": "Kennebunk Lacrosse Club",
-          "displayDescripton": "Lacrosse the best sport ever invented",
+          "displayDescription": "Lacrosse the best sport ever invented",
+          "displayImage": "randomImage1.jpg",
           "page": "projects/kbklax/kbklax.js"
         }
       ]

@@ -1,7 +1,9 @@
+/**********************************************************************************************************************/
 import jsonData from './projects.json'; 
 
 // TBD UNIT Tests
 // Validate file types for images
+// JavaScript Comments
 
 /**
  * Abstract the data from the main application. In this case the data is
@@ -57,7 +59,7 @@ class Projects {
   constructor(json) {
     this.#json = (undefined === json) ? jsonData : json;
   }
-  
+
   [Symbol.iterator]() {
     let topicIndex = 0;
     let topicName;

@@ -60,6 +60,15 @@ git add myfile.jpg
 [create-react-app](create-react-app.dev)
 [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
+# Unit/System Testing 
+- JEST: jestjs.io
+- Included with react (don't try to install it again as it confuses things greatly requiring one to wipe out the NPM stuff and re-install)
+- To Debug in vscode
+  - Open Debug Terminal 
+  - Set the break point
+  - From the terminal run the tests in watch mode (npm test --watch)
+  - https://stackoverflow.com/questions/33247602/how-do-you-debug-jest-tests
+
 # Todo
   - Create a better Logo, make the favicon the same as the logo
   - Look into vulnerabilities identified when installing react. What are these
