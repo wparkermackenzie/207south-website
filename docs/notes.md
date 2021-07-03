@@ -63,6 +63,8 @@ git add myfile.jpg
 # Unit/System Testing 
 - JEST: jestjs.io
 - Included with react (don't try to install it again as it confuses things greatly requiring one to wipe out the NPM stuff and re-install)
+- To run tests in terminal from root node directory:
+  - npm run test
 - To Debug in vscode
   - Open Debug Terminal 
   - Set the break point
