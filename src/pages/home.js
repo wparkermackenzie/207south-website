@@ -7,53 +7,62 @@ function Highlights() {
     <h1>Home Hightlights about Me</h1>
   );
 }
+
 function Project(props) {
-  let key = 9; //TBD Hash name and topic name
-  return(
-    <>
-      <li className='project'>
-        <Link className='project_link' to={props.entry.page}>
-          <figure>
-            <img src={props.entry.image} alt={props.entry.name} className='project_image'/>
-            <figcaption>{props.entry.description}</figcaption>
-          </figure>
-        </Link>
-      </li>
-    </>
+  return (
+    <li className='project'>
+      <Link className='project_link' to={props.entry.page}>
+        <figure>
+          <img src={props.entry.image} alt={props.entry.name} className='project_image' />
+          <figcaption>{props.entry.description}</figcaption>
+        </figure>
+      </Link>
+    </li>
   );
 }
 
 function Topic(props) {
-  let key = 10; // TBD
+  const projectsToRender = props.projectList;
+  const listItems = projectsToRender.map((entry)=>
+    <Project key={entry.name} entry={entry}/> );
   return(
-    <div key={key} className='topic'>
-      <h2 className='topic_heading'>{props.entry.topicName}</h2>
-      <p className='topic_description'>{props.entry.topicDescription}</p>
-      {props.projectJsx}
+    <div className='topic'>
+      <h2 className='topic_heading'>{props.name}</h2>
+      <p className='topic_description'>{props.description}</p>
+      <ul className='project_list'>
+        {listItems}
+      </ul>
     </div>
   )
 }
 
 function ProjectList () {
   let projects = new Projects();
-  let projectJsx = [];
+  let projectList = [];
   let r = [];
-  let topicNamePrev;
+  let topicName;
+  let topicDescription;
   let entry;
   for(entry of projects) {
-    if( topicNamePrev !== undefined && entry.topicName !== topicNamePrev ) {
-      r.push(<Topic entry={entry} projectJsx={projectJsx}/>);
-      projectJsx = [];
-      topicNamePrev = entry.topicName;
-      projectJsx.push(<Project entry={entry} />);
+    if( undefined === topicName) {
+      topicName = entry.topicName;
+      topicDescription = entry.topicDescription;
+    }
+
+    if( entry.topicName === topicName){
+      projectList.push(entry);
     }
     else {
-      topicNamePrev = entry.topicName;
-      projectJsx.push(<Project entry={entry} />);
+      r.push(<Topic key={topicName} name={topicName} description={topicDescription} projectList={projectList}/>);
+      projectList = [];
+      projectList.push(entry);
+      topicName= entry.topicName;
+      topicDescription = entry.topicDescription;
     }
   }
-  if(entry !== undefined && projectJsx.length > 0) {
-    r.push(<Topic entry={entry} projectJsx={projectJsx} />);
+
+  if(entry !== undefined && projectList.length > 0) {
+    r.push(<Topic key={topicName} name={topicName} description={topicDescription} projectList={projectList} />);
   }
   return(r);
 
@@ -68,10 +77,10 @@ function ProjectList () {
 function Home() {
   return(
     <>
-      <section>
+      <section className='highlights_container'>
         <Highlights/>
       </section>
-      <section>
+      <section className='projects_container'>
         <ProjectList/>
       </section>
     </>
