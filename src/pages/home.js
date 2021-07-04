@@ -4,7 +4,7 @@ import { Projects } from '../data/projects.js';
 
 function Highlights() {
   return(
-    <h1>Home Hightlights about Me</h1>
+    <h1>Hello Hightlights about Me</h1>
   );
 }
 
@@ -13,7 +13,13 @@ function Project(props) {
     <li className='project'>
       <Link className='project_link' to={props.entry.page}>
         <figure>
-          <img src={props.entry.image} alt={props.entry.name} className='project_image' />
+          {/* Note the nifty trick using require to tell react/webpack
+              to bring along static images which are defined via data.
+              Thank you stackoverflow... I would have beat my head 
+              against the wall way to long to figure this one out...
+              https://stackoverflow.com/questions/62192049/how-do-i-dynamically-import-images-in-react
+          */}
+          <img src={require('../images/'+props.entry.image).default} alt={props.entry.name} className='project_image' />
           <figcaption>{props.entry.description}</figcaption>
         </figure>
       </Link>
@@ -23,6 +29,14 @@ function Project(props) {
 
 function Topic(props) {
   const projectsToRender = props.projectList;
+  /*  React uses keys to identify which items in a list have changed.
+      Generally the key should be with the list item...HOWEVER,
+      if the list item is extraced with another component (for 
+      example using the Project component below), the key should
+      be with the component rater than the <li> list item itself.
+      This is a little bit of fun and excitement in the fine print 
+      which can cause 10s of minutes of head scratching...
+      https://reactjs.org/docs/lists-and-keys.html */
   const listItems = projectsToRender.map((entry)=>
     <Project key={entry.name} entry={entry}/> );
   return(
@@ -81,6 +95,7 @@ function Home() {
         <Highlights/>
       </section>
       <section className='projects_container'>
+        <h1>Projects</h1>
         <ProjectList/>
       </section>
     </>
