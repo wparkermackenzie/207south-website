@@ -1,7 +1,6 @@
 /**********************************************************************************************************************/
 import jsonData from './projects.json'; 
 
-// TBD UNIT Tests
 // Validate file types for images
 // JavaScript Comments
 

@@ -31,6 +31,11 @@ The Navigation Bar is made up of 3 Flex Boxes.
   justify-content: space-between;
 }
 
+.navigationBar-container-logo {
+  /* Get rid of the silly "this is a link" 1990s bar */
+  text-decoration: none;
+}
+
 .navigationBar-container {
   /* FlexBox: Menu Control */
   display: flex;

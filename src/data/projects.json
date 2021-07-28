@@ -1,7 +1,7 @@
 {
   "topics" : [
     {
-      "displayName": "Community",
+      "displayName": "Community Fun",
       "displayDescription": "A list of community level projects",
       "projects": [
         {
@@ -11,10 +11,10 @@
           "page": "projects/klt/klt.js"
         },
         {
-          "displayName": "Kennebunk Lacrosse Club",
-          "displayDescription": "Lacrosse the best sport ever invented",
+          "displayName": "Sample",
+          "displayDescription": "Walking skeleton... booo",
           "displayImage": "beachRainbow.jpg",
-          "page": "projects/kbklax/kbklax.js"
+          "page": "pages/projects/sample"
         },
         {
           "displayName": "Kennebunk Lacrosse Club 2",

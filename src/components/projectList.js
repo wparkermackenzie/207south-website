@@ -15,7 +15,7 @@ function Project(props) {
               https://stackoverflow.com/questions/62192049/how-do-i-dynamically-import-images-in-react
           */}
           <div className='project_link_figure_image_container'>
-            <img src={require('../images/' + props.entry.image).default} alt={props.entry.name} className='project_link_figure_image' />
+            <img src={require('../media/' + props.entry.image).default} alt={props.entry.name} className='project_link_figure_image' />
             <span className='project_link_figure_description'>{props.entry.description}</span>
           </div>
           <figcaption className='project_link_figure_caption'>{props.entry.name}</figcaption>
