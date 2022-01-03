@@ -2,10 +2,15 @@ import './App.css';
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
+// Components
 import {Footer} from './components/footer.js';
 import {Navbar} from './components/navbar.js';
 import {Home} from './pages/home.js';
-import {Sample} from './pages/projects/sample/sample.js';
+
+// Pages
+import {PageProjectWorkingWithPosixThreads} from './pages/project_linuxThreading.js';
+import {Test} from './pages/test.js';
+
 
 /**
  * Entry point function component for the react application.
@@ -51,8 +56,11 @@ function App() {
                     <Route path='/' exact >
                       <Home />
                     </Route>
-                    <Route path='/pages/projects/sample' exact>
-                      <Sample />
+                    <Route path='/pages/posixThreads' exact>
+                      <PageProjectWorkingWithPosixThreads />
+                    </Route>
+                    <Route path='/pages/test' exact>
+                      <Test/>
                     </Route>
                 </Switch>
                 <Footer />

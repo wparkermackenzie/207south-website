@@ -11,10 +11,10 @@
           "page": "projects/klt/klt.js"
         },
         {
-          "displayName": "Sample",
+          "displayName": "test",
           "displayDescription": "Walking skeleton... booo",
           "displayImage": "beachRainbow.jpg",
-          "page": "pages/projects/sample"
+          "page": "pages/test"
         },
         {
           "displayName": "Kennebunk Lacrosse Club 2",
@@ -44,7 +44,7 @@
           "displayName": "Linux Threads",
           "displayDescription": "Thoughts to keep in mind when using Linux Threads",
           "displayImage": "beachRainbow.jpg",
-          "page": "projects/linuxThreads/linuxThreads.js"
+          "page": "pages/posixThreads"
         }
       ]
     },
