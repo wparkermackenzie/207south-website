@@ -1,3 +1,13 @@
+# The Genesis of 207south
+A little bit of fun which once started just kept going. Once one new learning was conquered it was easy to just start in on something else with little regard to the actual end product. Oh the things one can do when producing customer value can be ignored. The downside to this kind of mentality is that it eventually ends for some reason or the other (disinterest, a wall which doesn't sound like fun in scaling, or a hiking adventure which takes one away long enough they forget where the project was left off)... honestly, probably all of these and more apply. What is left when enjoying the journey to this extent is a lack of a destination to show for one's efforts; in this case no website to visually display data from IoT projects. 
+
+With this, I am shelving this as a learning experience. Starting a new repo with the 207south-website name and start some real iterative value oriented development. 
+
+> "It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to" - J.R.R. Tolkien
+
+W Parker MacKenzie
+----------------------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
