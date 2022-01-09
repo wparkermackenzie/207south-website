@@ -1,0 +1,94 @@
+/***********************************************************************************************************************
+ 207South - projectList.css
+ W P Mackenzie
+***********************************************************************************************************************/
+
+
+.topic {
+
+}
+
+.topic_heading {
+
+}
+
+.topic_description{
+
+}
+
+.project_list_container {
+}
+
+.project_list {
+  /*  The list of projects in each of the topics is displayed in an implicit grid.
+      Create as many columns which will fit into the topic container. The minimum
+      track size is 200px and a maximum of 1 fractional unit (the fractional space
+      left in the container).
+      Each grid item's gutter size is specified with the gap parameter.
+  */
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  grid-auto-rows: minmax(100px,auto);
+  gap: 20px;
+
+  /* No bullets */
+  list-style-type: none;
+}
+
+.project {
+}
+
+.project_link {
+  /* Don't put lines under the links its so 90s
+     also center the text. */
+  text-decoration: none;
+  text-align: center;
+}
+
+
+.project_link_figure{
+}
+
+.project_link_figure_image_container {
+  position:relative;
+}
+
+.project_link_figure_image {
+  /* Image the size of the cell */
+  width: 100%;
+
+  /* Round off the image */
+  border-radius: 10px;
+}
+
+.project_link_figure_description {
+  /* By default the description is hidden */
+  visibility: hidden;
+
+  /* Center the text */
+  text-align: center;
+
+  /* Set the description text inside the image. 
+     Absolute position within the containing object
+     (see link figure container is set to relative). */
+  position:absolute;
+  top:25%;
+  left:50%;
+  width:100%;
+  transform: translate(-50%,-50%);
+
+  /* The description text is a light color displayed on a
+     semitransparent dark background with a font size
+     slightly smaller than that used in the project.*/
+  background:rgba(0, 0, 0, 0.33);
+  color:whitesmoke;
+  font-size: .8em;
+}
+
+.project_link_figure_caption {
+
+}
+
+.project_link:hover .project_link_figure_description {
+  visibility: visible;
+}

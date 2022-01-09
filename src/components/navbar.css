@@ -1,0 +1,67 @@
+/*
+207 South: navbar.css
+W P Mackenzie 2021
+
+Flex Box Layout
+---------------
+The Navigation Bar is made up of 3 Flex Boxes.
++-----------------------------------------------------------------------------------------+
+| Logo                                                               +------------------+ |
+|                                                                    | +-------------+ =| |
+|                                                                    | |  Menu       |  | |
+|                                                                    | |   Items     |  | |
+|                                                                    | |             |  | |
+|                                                                    | +-------------+  | |
+|                                                                    +------------------+ |
+|                                                                                         |
++-----------------------------------------------------------------------------------------+
+- Logo :  The Logo FlexBox contains all of the other FlexBoxes. The content is justified 
+          such that the logo will appear on the left most side of the screen and the menu
+          and menu control will appear on the right most side of the screen.
+
+- Menu Control(=) : The Menu Control FlexBox contains the Menu Items flex box. The 
+                    justification of which is at the start of the FlexBox.
+
+- Menu Items :  The Menu Items FlexBox contains a list of pages the user can select from the
+                navigation bar. This FlexBox is distributed in a a top-down column direction.
+*/
+.navigationBar {
+  /* FlexBox: Logo */
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigationBar-container-logo {
+  /* Get rid of the silly "this is a link" 1990s bar */
+  text-decoration: none;
+}
+
+.navigationBar-container {
+  /* FlexBox: Menu Control */
+  display: flex;
+
+}
+
+.navigationBar-menu {
+  /* FlexBox: Menu Items */
+  display: flex;
+  flex-direction: column;
+
+  /* By default don't display the menu */
+  opacity: 0;
+}
+
+.navigationBar-menu.isActive {
+  /* Peekaboo I see you menu items */
+  opacity: 1;
+}
+
+.navigationBar-menuItem {
+  /* By default don't display the menu items */
+  display: none;
+}
+
+.navigationBar-menuItem.isActive {
+  /* Peekaboo I see you menu items */
+  display: block;
+}

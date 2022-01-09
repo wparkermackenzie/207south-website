@@ -1,0 +1,70 @@
+{
+  "topics" : [
+    {
+      "displayName": "Community Fun",
+      "displayDescription": "A list of community level projects",
+      "projects": [
+        {
+          "displayName": "Kennebunk Land Conservation Trails",
+          "displayDescription": "Stuff goes here associated with land trust",
+          "displayImage": "beachRainbow.jpg",
+          "page": "projects/klt/klt.js"
+        },
+        {
+          "displayName": "test",
+          "displayDescription": "Walking skeleton... booo",
+          "displayImage": "beachRainbow.jpg",
+          "page": "pages/test"
+        },
+        {
+          "displayName": "Kennebunk Lacrosse Club 2",
+          "displayDescription": "Lacrosse the best sport ever invented",
+          "displayImage": "beachRainbow.jpg",
+          "page": "projects/kbklax/kbklax.js"
+        },
+        {
+          "displayName": "Kennebunk Lacrosse Club 4",
+          "displayDescription": "Lacrosse the best sport ever invented",
+          "displayImage": "beachRainbow.jpg",
+          "page": "projects/kbklax/kbklax.js"
+        }
+      ]
+    },
+    {
+      "displayName": "Technology",
+      "displayDescription": "Fun technology projets (some even completed)",
+      "projects": [
+        {
+          "displayName": "Website 207South",
+          "displayDescription": "Building this website with React",
+          "displayImage": "beachRainbow.jpg",
+          "page": "projects/web207south/web207south.js"
+        },
+        {
+          "displayName": "Linux Threads",
+          "displayDescription": "Thoughts to keep in mind when using Linux Threads",
+          "displayImage": "beachRainbow.jpg",
+          "page": "pages/posixThreads"
+        }
+      ]
+    },
+    {
+      "displayName": "Wood Working",
+      "displayDescription": "Building stuff out of wood",
+      "projects": [
+        {
+          "displayName": "Bird Houses",
+          "displayDescription": "Housing my feathered friends",
+          "displayImage": "beachRainbow.jpg",
+          "page": "projects/birdHouses/birdHouse.js"
+        },
+        {
+          "displayName": "Sign Post",
+          "displayDescription": "Signs signs everywhere theres signs",
+          "displayImage": "beachRainbow.jpg",
+          "page": "projects/signPost/signPost.js"
+        }
+      ]
+    }
+  ]
+}
